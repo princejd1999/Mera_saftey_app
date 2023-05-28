@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Hospital"
+        android:id="@+id/home_1_icon"
+        android:icon="@drawable/baseline_airport_shuttle_24"/>
+    <item android:title="Ambulance"
+        android:id="@+id/home_2_icon"
+        android:icon="@drawable/baseline_add_business_24"/>
+    <item android:title="Fitness"
+        android:id="@+id/home_3_icon"
+        android:icon="@drawable/baseline_fitness_center_24"/>
+    <item android:title="Home"
+        android:id="@+id/home_4_icon"
+        android:icon="@drawable/baseline_local_taxi_24"/>
+</menu>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/home_background"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/security"
+        android:textStyle="bold"
+        android:textSize="@dimen/_40sp"
+        android:layout_margin="@dimen/_16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:elevation="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:cardBackgroundColor="@color/blue_card_home"
+        android:layout_margin="@dimen/_16dp"
+        app:cardCornerRadius="@dimen/_17dp"
+        android:id="@+id/blue_card"/>
+
+    <androidx.cardview.widget.CardView
+        android:elevation="@dimen/_16dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180dp"
+        app:layout_constraintTop_toBottomOf="@id/blue_card"
+        app:cardBackgroundColor="@color/pink_card_home"
+        android:layout_margin="@dimen/_16dp"
+        app:cardCornerRadius="@dimen/_17dp"
+        android:id="@+id/pink_card"/>
+
+    <TextView
+        android:id="@+id/blue_card_header_text"
+        app:layout_constraintStart_toStartOf="@id/blue_card"
+        app:layout_constraintTop_toTopOf="@id/blue_card"
+        android:text="@string/sos_head"
+        android:textStyle="bold"
+        android:textSize="@dimen/_34sp"
+        android:textColor="@color/white"
+        android:elevation="@dimen/_8dp"
+        android:layout_margin="@dimen/_16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/pink_card_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16dp"
+        android:elevation="@dimen/_8dp"
+        android:text="@string/guard_head"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/pink_card"
+        app:layout_constraintTop_toTopOf="@id/pink_card" />
+
+    <TextView
+        android:id="@+id/pink_card_header_msg"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16dp"
+        android:elevation="8dp"
+        android:text="@string/sos_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_24sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@id/blue_card_img"
+        app:layout_constraintStart_toStartOf="@id/blue_card"
+        app:layout_constraintTop_toBottomOf="@id/blue_card_header_text" />
+
+    <ImageView
+        android:id="@+id/blue_card_img"
+        android:layout_width="@dimen/_94dp"
+        android:layout_height="@dimen/_94dp"
+        android:layout_margin="@dimen/_16dp"
+        android:elevation="8dp"
+        android:src="@drawable/sos_1"
+        app:layout_constraintBottom_toBottomOf="@id/blue_card"
+        app:layout_constraintEnd_toEndOf="@id/blue_card"
+        app:layout_constraintTop_toTopOf="@id/blue_card" />
+
+
+
+    <TextView
+        android:id="@+id/blue_card_header_msg"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="8dp"
+        android:text="@string/guard_text"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@id/pink_card_img"
+        app:layout_constraintStart_toStartOf="@id/pink_card"
+        app:layout_constraintTop_toBottomOf="@id/pink_card_header_text" />
+
+    <ImageView
+        android:id="@+id/pink_card_img"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_margin="16dp"
+        android:elevation="8dp"
+        android:src="@drawable/guard_1"
+        app:layout_constraintBottom_toBottomOf="@id/pink_card"
+        app:layout_constraintEnd_toEndOf="@id/pink_card"
+        app:layout_constraintTop_toTopOf="@id/pink_card" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:menu="@menu/bottom_bar_home__menu"
+        app:itemIconTint="@drawable/icon_color"
+        app:itemTextColor="@color/blue_card_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
